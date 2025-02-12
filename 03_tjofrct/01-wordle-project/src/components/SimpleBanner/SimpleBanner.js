@@ -1,0 +1,7 @@
+import React from "react";
+
+function SimpleBanner({ status, children }) {
+  return <div className={`banner ${status}`}>{children}</div>;
+}
+
+export default SimpleBanner;
