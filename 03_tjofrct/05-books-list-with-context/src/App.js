@@ -4,7 +4,7 @@ import BookList from "./components/BookList";
 import useBooksContext from "./hooks/use-books-context";
 
 export default function App() {
-  const { fetchBooks, books } = useBooksContext();
+  const { fetchBooks } = useBooksContext();
   useEffect(() => {
     fetchBooks();
   }, [fetchBooks]);
