@@ -1,7 +1,9 @@
+import Example from "./01-useState/03-useState-array";
+
 function App() {
   return (
-    <div className='container'>
-      <h2>Advanced React</h2>
+    <div className="container">
+      <Example />
     </div>
   );
 }
