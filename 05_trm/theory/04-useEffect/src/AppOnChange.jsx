@@ -3,7 +3,7 @@ import "./index.css";
 
 const KEY = "8f25bdc1b5f949ea863131208251004";
 
-function App() {
+function AppOnChange() {
   const [city, setCity] = useState("");
   const [weatherData, setWeatherData] = useState(null);
   const [error, setError] = useState(null);
@@ -27,47 +27,37 @@ function App() {
     );
   }, []);
 
-  useEffect(() => {
-    //для управления гонкой состояний fetch API
-    const controller = new AbortController();
-    const signal = controller.signal;
+  async function handleCityChange(e) {
+    const newCity = e.target.value;
+    setCity(newCity);
+
     if (!city.trim() && !coords) {
       setWeatherData(null);
       setError(null);
       return;
     }
-    getData(signal);
-    //очистка useEffect
-    return () => {
-      controller.abort();
-    };
-  }, [city, coords]);
 
-  async function getData(signal) {
     setLoading(true);
     try {
-      const query = city.trim()
+      const query = newCity.trim()
         ? city
         : `${coords.latitude},${coords.longitude}`;
+
       const res = await fetch(
-        `http://api.weatherapi.com/v1/current.json?key=${KEY}&q=${query}`,
-        { signal }
+        `http://api.weatherapi.com/v1/current.json?key=${KEY}&q=${query}`
       );
-      // используем, если API не возвращает ошибку самостоятельно
-      /* if (!res.ok) {
-          throw new Error(`Status:${res.status} Message:${res.statusText}`);
-      } */
       const data = await res.json();
-      // если API возвращает сообщение об ошибке
+
       if (data.error) {
         setError(data.error.message);
         setWeatherData(null);
         return;
       }
+
       setWeatherData(data);
       setError(null);
-    } catch (error) {
-      setError(error.message);
+    } catch {
+      setError("Failed to fetch weather data");
       setWeatherData(null);
     } finally {
       setLoading(false);
@@ -107,14 +97,14 @@ function App() {
     <div className="app">
       <div className="widget-container">
         <div className="weather-card-container">
-          <h1 className="app-title">Weather Widget</h1>
+          <h1 className="app-title">Weather Widget (no useEffect) </h1>
           <div className="search-container">
             <input
               type="text"
               placeholder="Enter city name"
               className="search-input"
               value={city}
-              onChange={(e) => setCity(e.target.value)}
+              onChange={handleCityChange}
             />
           </div>
         </div>
@@ -126,4 +116,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppOnChange;
