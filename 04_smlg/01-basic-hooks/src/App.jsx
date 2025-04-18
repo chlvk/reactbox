@@ -1,4 +1,4 @@
-import Example from "./01-useState/05-useState-gotcha";
+import Example from "./02-useEffect/03-multiple-effects";
 
 function App() {
   return (
