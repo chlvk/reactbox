@@ -1,4 +1,4 @@
-import Example from "./02-useEffect/03-multiple-effects";
+import Example from "./02-useEffect/04-fetch-data";
 
 function App() {
   return (
