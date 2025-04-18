@@ -1,4 +1,4 @@
-import Example from "./01-useState/03-useState-array";
+import Example from "./01-useState/05-useState-gotcha";
 
 function App() {
   return (
