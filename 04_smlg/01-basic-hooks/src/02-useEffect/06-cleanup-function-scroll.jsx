@@ -15,12 +15,10 @@ const CleanupFunction = () => {
 
 function ComponentWithEffect() {
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      console.log("You better clean me up");
-    }, 1000);
+    const randomFunction = () => {};
+    window.addEventListener("scroll", randomFunction);
     return () => {
-      console.log("Cleanup ❌ happening");
-      clearInterval(intervalId);
+      window.removeEventListener("scroll", randomFunction);
     };
   }, []);
   return <h4>I'm reincarnated</h4>;

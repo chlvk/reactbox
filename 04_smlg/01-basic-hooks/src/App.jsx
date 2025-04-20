@@ -1,5 +1,4 @@
-import Example from "./02-useEffect/04-fetch-data";
-
+import Example from "./02-useEffect/05-cleanup-function";
 function App() {
   return (
     <div className="container">
