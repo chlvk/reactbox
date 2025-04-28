@@ -80,7 +80,7 @@ function App() {
         <h1>Task list with priority levels</h1>
         {openSection.taskForm && <TaskForm onSubmit={handleAddTask} />}
         <button
-          className={`close-button ${openSection.taskForm && "open"}`}
+          className={`close-button ${openSection.taskForm ? "open" : ""}`}
           onClick={() => toggleSection("taskForm")}
         >
           +
@@ -90,14 +90,14 @@ function App() {
         <h2>Tasks</h2>
         <div className="sort-controls">
           <button
-            className={`sort-button ${sortType === "date" && "active"}`}
+            className={`sort-button ${sortType === "date" ? "active" : ""}`}
             onClick={() => sortTasks("date")}
           >
             By date{" "}
             {sortType === "date" && (sortOrder === "asc" ? "\u2191" : "\u2193")}
           </button>
           <button
-            className={`sort-button ${sortType === "priority" && "active"}`}
+            className={`sort-button ${sortType === "priority" ? "active" : ""}`}
             onClick={() => sortTasks("priority")}
           >
             By priority{" "}
@@ -113,7 +113,7 @@ function App() {
           />
         )}
         <button
-          className={`close-button ${openSection.taskList && "open"}`}
+          className={`close-button ${openSection.taskList ? "open" : ""}`}
           onClick={() => toggleSection("taskList")}
         >
           +
@@ -128,7 +128,9 @@ function App() {
           />
         )}
         <button
-          className={`close-button ${openSection.completedTaskList && "open"}`}
+          className={`close-button ${
+            openSection.completedTaskList ? "open" : ""
+          }`}
           onClick={() => toggleSection("completedTaskList")}
         >
           +

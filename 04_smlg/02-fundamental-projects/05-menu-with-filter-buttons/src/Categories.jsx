@@ -5,7 +5,7 @@ function Categories({ categories, filterItems, activeCategory }) {
         return (
           <button
             type="button"
-            className={`btn ${item === activeCategory && "btn-active"}`}
+            className={`btn ${item === activeCategory ? "btn-active" : ""}`}
             key={item}
             onClick={() => filterItems(item)}
           >

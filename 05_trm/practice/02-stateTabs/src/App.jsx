@@ -84,19 +84,19 @@ export default function App() {
 
             <div className="tab-buttons">
               <button
-                className={`tab-button ${openedTab === 0 && "active"}`}
+                className={`tab-button ${openedTab === 0 ? "active" : ""}`}
                 onClick={() => handleTabClick(0)}
               >
                 Tab 1
               </button>
               <button
-                className={`tab-button ${openedTab === 1 && "active"}`}
+                className={`tab-button ${openedTab === 1 ? "active" : ""}`}
                 onClick={() => handleTabClick(1)}
               >
                 Tab 2
               </button>
               <button
-                className={`tab-button ${openedTab === 2 && "active"}`}
+                className={`tab-button ${openedTab === 2 ? "active" : ""}`}
                 onClick={() => handleTabClick(2)}
               >
                 Tab 3

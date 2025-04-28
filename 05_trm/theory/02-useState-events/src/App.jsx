@@ -30,7 +30,7 @@ function App() {
             <img
               src="/vite.svg"
               className={`logo ${
-                (count >= 1 || activeLogo === "vite") && "active"
+                count >= 1 || activeLogo === "vite" ? "active" : ""
               }`}
               alt="Vite logo"
               onMouseEnter={() => handleMouseEnter("vite")}
@@ -40,7 +40,7 @@ function App() {
             <img
               src="/react.svg"
               className={`logo ${
-                (count >= 2 || activeLogo === "react") && "active"
+                count >= 2 || activeLogo === "react" ? "active" : ""
               }`}
               alt="React logo"
               onMouseEnter={() => handleMouseEnter("react")}
@@ -50,7 +50,7 @@ function App() {
             <img
               src="/love.svg"
               className={`logo ${
-                (count >= 3 || activeLogo === "love") && "active"
+                count >= 3 || activeLogo === "love" ? "active" : ""
               }`}
               alt="Love logo"
               onMouseEnter={() => handleMouseEnter("love")}
