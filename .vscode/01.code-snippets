@@ -36,5 +36,22 @@
       ""
     ],
     "description": "React styled component"
+  },
+  "reactConstComponent": {
+    "prefix": "rcnst",
+    "scope": "javascript,typescript,javascriptreact",
+    "body": [
+      "const $TM_FILENAME_BASE = () => {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t$2",
+      "\t\t</div>",
+      "\t)",
+      "};",
+      "",
+      "export default $TM_FILENAME_BASE",
+      ""
+    ],
+    "description": "React Component (const)"
   }
 }
