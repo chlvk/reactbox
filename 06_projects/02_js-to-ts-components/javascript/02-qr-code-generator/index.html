@@ -13,8 +13,13 @@
 </head>
 
 <body>
-  <!-- content here -->
+  <h1>QR Code Generator</h1>
+  <label for="input">Enter text or URL:</label>
+  <input class="input" type="text" id="input" placeholder="Some text">
+  <button class="button" type="button" id="button">Generate QR code</button>
+  <div class="qrcode" id="qrcode"></div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 

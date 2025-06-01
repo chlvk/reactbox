@@ -1,0 +1,39 @@
+html {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.button {
+  margin-top: 1.25rem;
+  padding: 0.625rem 1.25rem;
+  font-size: 1rem;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 0.312rem;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.input {
+  padding: 0.625rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.312rem;
+  outline: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.gap {
+  gap: 0.312rem;
+}

@@ -1,7 +1,7 @@
 {
   "reactComponent": {
     "prefix": "rfc",
-    "scope": "javascript,typescript,javascriptreact",
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
     "body": [
       "function ${1:${TM_FILENAME_BASE}}() {",
       "\treturn (",
@@ -18,7 +18,7 @@
   },
   "reactStyledComponent": {
     "prefix": "rsc",
-    "scope": "javascript,typescript,javascriptreact",
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
     "body": [
       "import styled from 'styled-components'",
       "",
@@ -39,7 +39,7 @@
   },
   "reactConstComponent": {
     "prefix": "rcnst",
-    "scope": "javascript,typescript,javascriptreact",
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
     "body": [
       "const $TM_FILENAME_BASE = () => {",
       "\treturn (",

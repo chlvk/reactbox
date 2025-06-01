@@ -1,0 +1,29 @@
+.search {
+  display: flex;
+  justify-content: right;
+  width: 300px;
+}
+
+.input {
+  padding: 0;
+  width: 0;
+  border: 0;
+  transition: width 0.3s;
+}
+
+.input.active {
+  width: 140px;
+  padding: 10px;
+  border: 1px solid darkgray;
+  border-right: none;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: 1px solid darkgrey;
+}
