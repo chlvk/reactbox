@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Starter Template</title>
+
+  <link href="../base.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <div class="flex flex-col gap">
+    <div class="flex gap">
+      <input id="uppercase" type="checkbox" name="uppercase">
+      <label for="uppercase">Uppercase</label>
+    </div>
+    <div class="flex gap">
+      <input id="lowercase" type="checkbox" name="lowercase">
+      <label for="lowercase">Lowercase</label>
+    </div>
+    <div class="flex gap">
+      <input id="numbers" type="checkbox" name="numbers">
+      <label for="numbers">Numbers</label>
+    </div>
+    <div class="flex gap">
+      <input id="special" type="checkbox" name="special">
+      <label for="special">Special</label>
+    </div>
+    <div class="flex">
+      <input type="range" name="range" id="range" value="16" min="16" max="32" step="1">
+      <span id="range-value">length: 16</span>
+    </div>
+    <div class="flex">
+      <button class="button" id="generate-button">Generate</button>
+    </div>
+    <div class="flex">
+      <pre id="password-placement" style="background-color: aliceblue;"></pre>
+    </div>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
