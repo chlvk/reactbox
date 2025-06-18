@@ -37,3 +37,12 @@ html {
 .gap {
   gap: 0.312rem;
 }
+
+.w-500 {
+  width: 31.25rem
+    /* 500px */
+}
+
+.margin-top {
+  margin-top: 0.625rem;
+}

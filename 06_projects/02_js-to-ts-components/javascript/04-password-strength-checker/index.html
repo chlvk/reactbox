@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Starter Template</title>
+
+  <link href="../base.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <div class="flex flex-col w-500">
+    <label for="password">Enter password:</label>
+    <input class="input margin-top" type="password" name="password" id="password" placeholder="some-password">
+    <div class="strength-meter margin-top">
+      <div data-name="strength-meter-fill" id="strength-meter-fill"></div>
+    </div>
+    <div class="margin-top" id="strength-text">
+      Strength: N/A
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

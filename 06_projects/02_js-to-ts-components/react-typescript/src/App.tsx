@@ -2,6 +2,7 @@ import { useState } from "react";
 import HiddenSearchBox from "./projects/01-HiddenSearchBox/HiddenSearchBox";
 import QRcodeGenerator from "./projects/02-QRCodeGenerator/QRCodeGenerator";
 import PasswordGenerator from "./projects/03-PasswordGenerator/PasswordGenerator";
+import PasswordStrengthChecker from "./projects/04-PasswordStrengthChecker/PasswordStrengthChecker";
 
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -10,6 +11,7 @@ function App() {
     { label: "Hidden Search Box", component: <HiddenSearchBox /> },
     { label: "QRcode Generator", component: <QRcodeGenerator /> },
     { label: "Password Generator", component: <PasswordGenerator /> },
+    { label: "Password Checker", component: <PasswordStrengthChecker /> },
   ];
 
   return (
