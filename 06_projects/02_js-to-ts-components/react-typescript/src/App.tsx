@@ -3,6 +3,7 @@ import HiddenSearchBox from "./projects/01-HiddenSearchBox/HiddenSearchBox";
 import QRcodeGenerator from "./projects/02-QRCodeGenerator/QRCodeGenerator";
 import PasswordGenerator from "./projects/03-PasswordGenerator/PasswordGenerator";
 import PasswordStrengthChecker from "./projects/04-PasswordStrengthChecker/PasswordStrengthChecker";
+import TextToSpeak from "./projects/05-TextToSpeak/TextToSpeak";
 
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -12,6 +13,7 @@ function App() {
     { label: "QRcode Generator", component: <QRcodeGenerator /> },
     { label: "Password Generator", component: <PasswordGenerator /> },
     { label: "Password Checker", component: <PasswordStrengthChecker /> },
+    { label: "Text To Speak", component: <TextToSpeak /> },
   ];
 
   return (
@@ -20,18 +22,14 @@ function App() {
         {components.map((item, index) => (
           <button
             key={index}
-            className={`button transition-transform ${
-              activeIndex === index ? "translate-x-2 bg-green-700" : ""
-            }`}
+            className={`button transition-transform ${activeIndex === index ? "translate-x-2 bg-green-700" : ""}`}
             onClick={() => setActiveIndex(index)}
           >
             {item.label}
           </button>
         ))}
       </aside>
-      <main className="flex items-center justify-center flex-1 border-l-2">
-        {components[activeIndex].component}
-      </main>
+      <main className="flex items-center justify-center flex-1 border-l-2">{components[activeIndex].component}</main>
     </div>
   );
 }
