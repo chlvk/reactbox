@@ -4,6 +4,7 @@ import QRcodeGenerator from "./projects/02-QRCodeGenerator/QRCodeGenerator";
 import PasswordGenerator from "./projects/03-PasswordGenerator/PasswordGenerator";
 import PasswordStrengthChecker from "./projects/04-PasswordStrengthChecker/PasswordStrengthChecker";
 import TextToSpeak from "./projects/05-TextToSpeak/TextToSpeak";
+import CircularProgressBar from "./projects/06-CircularProgressBar/CircularProgressBar";
 
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -14,6 +15,7 @@ function App() {
     { label: "Password Generator", component: <PasswordGenerator /> },
     { label: "Password Checker", component: <PasswordStrengthChecker /> },
     { label: "Text To Speak", component: <TextToSpeak /> },
+    { label: "Circular Progress Bar", component: <CircularProgressBar /> },
   ];
 
   return (
