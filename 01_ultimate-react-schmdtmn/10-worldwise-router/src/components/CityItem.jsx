@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useCities } from "../contexts/CitiesContext";
 import styles from "./CityItem.module.css";
 
 const formatDate = (date) =>
@@ -9,14 +10,13 @@ const formatDate = (date) =>
   }).format(new Date(date));
 
 function CityItem({ city }) {
+  const { currentCity } = useCities();
   const { cityName, emoji, date, id, position } = city;
 
   function handleClick(e) {
     e.preventDefault();
     // deleteCity( id);
   }
-
-  const currentCity = { id: null };
 
   return (
     <li>
